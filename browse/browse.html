@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Notes | College Notes Hub</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../browse/browse.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="../dashboard/dashboard.html">
+      StudyShare
+    </a>
+
+    <!-- TOGGLER -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#browseNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSIBLE MENU -->
+    <div class="collapse navbar-collapse" id="browseNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../dashboard/dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../profile/profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="logoutUser()">Logout</a>
+        </li>
+        <li class="nav-item">
+          <button id="themeToggle" class="btn btn-outline-light ms-2">🌙</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container my-5">
+
+  <h3 class="mb-4 text-center text-md-start">Browse Notes</h3>
+
+  <!-- FILTERS -->
+  <div class="row g-2 mb-4">
+    <div class="col-12 col-md-5">
+      <input
+        type="text"
+        id="searchInput"
+        class="form-control"
+        placeholder="Search by title or subject..."
+      />
+    </div>
+
+    <div class="col-12 col-md-4">
+      <select id="departmentFilter" class="form-select">
+        <option value="all">All Departments</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Electronics">Electronics</option>
+        <option value="English">English</option>
+        <option value="Commerce">Commerce</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Civil">Civil</option>
+      </select>
+    </div>
+
+    <div class="col-12 col-md-3">
+      <select id="sortFilter" class="form-select">
+        <option value="latest">Latest</option>
+        <option value="downloads">Most Downloaded</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-responsive">
+    <table class="table table-hover align-middle">
+      <thead class="table-primary">
+        <tr>
+          <th>Title</th>
+          <th>Subject</th>
+          <th>Department</th>
+          <th>Uploaded By</th>
+          <th>Date</th>
+          <th>Downloads</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="browseTableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- PAGINATION -->
+  <div class="d-flex justify-content-between align-items-center mt-4">
+    <button id="prevBtn" class="btn btn-secondary" disabled>
+      Previous
+    </button>
+    <span id="pageInfo" class="fw-bold">Page 1</span>
+    <button id="nextBtn" class="btn btn-secondary">
+      Next
+    </button>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light text-center py-3 mt-5">
+  © 2025 College Notes Hub
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="../js/supabaseClient.js"></script>
+<script type="module" src="../js/auth.js"></script>
+<script type="module" src="./browse.js"></script>
+<script src="../js/theme.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - College Notes</title>
+
+  <link rel="stylesheet" href="../dashboard/dashboard.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid px-3 px-md-4">
+    <a class="navbar-brand" href="../hero_section/index.html">StudyShare</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a id="nav-dashboard" class="nav-link" href="../dashboard/dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a id="nav-profile" class="nav-link" href="../profile/profile.html">Profile</a></li>
+        <li class="nav-item"><a id="nav-login" class="nav-link" href="../login/login.html">Login</a></li>
+        <li class="nav-item"><a id="nav-register" class="nav-link" href="../register/register.html">Register</a></li>
+        <li class="nav-item"><a id="adminLink" class="nav-link" href="../admin/admin.html">Admin</a></li>
+        <li class="nav-item"><a id="logoutBtn" class="nav-link" href="#" onclick="logoutUser()">Logout</a></li>
+        <li class="nav-item">
+          <button id="themeToggle" class="btn btn-sm btn-outline-light ms-2">
+            🌙
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<div class="container-fluid px-3 px-md-4 mt-4">
+  <div class="dashboard-header">
+    <h3 id="welcomeuser">Welcome!</h3>
+    <p id="userEmail"></p>
+  </div>
+</div>
+
+<!-- DASHBOARD CONTENT -->
+<div class="container-fluid px-3 px-md-4 my-4">
+
+  <!-- STATS (RESPONSIVE FIX) -->
+  <div class="row g-3 my-4">
+    <div class="col-12 col-md-4">
+      <div class="card text-center p-3  shadow-sm">
+        <h6>Your Uploads</h6>
+        <h3 class="count" id="totaluploads">0</h3>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card text-center p-3 shadow-sm">
+        <h6>Total Subjects</h6>
+        <h3 class="count" id="totalsubjects">4</h3>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card text-center p-3 shadow-sm">
+        <h6>Downloads</h6>
+        <h3 class="count" id="downloads">12</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="row">
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Browse Materials</h5>
+          <p class="card-text">Find notes, question papers, and study guides.</p>
+          <a href="../browse/browse.html" class="btn btn-primary w-100 w-md-auto">Go</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Upload Material</h5>
+          <p class="card-text">Contribute notes and resources to help others.</p>
+          <a href="../upload/upload.html" class="btn btn-primary w-100 w-md-auto">Upload</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Profile</h5>
+          <p class="card-text">View and manage your contributions.</p>
+          <a href="../profile/profile.html" class="btn btn-primary w-100 w-md-auto">Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECENT UPLOADS -->
+  <h3 class="mt-5 mb-3">Recent Uploads</h3>
+
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead class="table-primary">
+        <tr>
+          <th>Title</th>
+          <th>Department</th>
+          <th>Uploaded By</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="recentUploadsBody">
+        <!-- JS inserts rows -->
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2025 College Notes Portal</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script type="module" src="../js/supabaseClient.js"></script>
+<script type="module" src="../js/auth.js"></script>
+<script type="module" src="../dashboard/dashboard.js"></script>
+<script src="../js/theme.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

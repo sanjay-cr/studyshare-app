@@ -1,0 +1,135 @@
+/* NAVBAR */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*.navbar {
+    background: #0066ff;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}*/
+
+/* MAIN CONTENT */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Upload Box */
+.upload-box {
+    background: white;
+    padding: 25px;
+    width: 60%;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn-upload {
+    background: #0066ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-upload:hover {
+    opacity: 0.9;
+}
+
+/* FOOTER */
+.footer {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    font-size: 14px;
+    width: 100%;
+}
+input[type="file"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background-color: #121212 !important;
+  color: #eaeaea !important;
+}
+
+body.dark .navbar {
+  background-color: #1e1e1e !important;
+}
+
+body.dark .card,
+body.dark .container,
+body.dark .table,
+body.dark .table th,
+body.dark .table td {
+  background-color: #1e1e1e !important;
+  color: #eaeaea !important;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #222 !important;
+  color: #fff !important;
+  border: 1px solid #444;
+}
+
+body.dark footer {
+  background-color: #111 !important;
+  color: #ccc !important;
+}

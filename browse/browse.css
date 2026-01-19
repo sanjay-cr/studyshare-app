@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f9fafb;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #0d6efd;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Browse Section */
+.browse {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.filter-box {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+select, .btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  background: #0d6efd;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Notes Grid */
+.notes-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.note-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.note-card h3 {
+  color: #0d6efd;
+}
+
+.note-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #0d6efd;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+
+
+/* FORCE DARK MODE FOR BROWSE PAGE */
+
+body.dark {
+  background-color: #121212 !important;
+  color: #eaeaea !important;
+}
+
+body.dark .navbar {
+  background-color: #1e1e1e !important;
+}
+
+body.dark .table,
+body.dark .table th,
+body.dark .table td {
+  background-color: #1e1e1e !important;
+  color: #eaeaea !important;
+  border-color: #333 !important;
+}
+
+body.dark .card {
+  background-color: #1e1e1e !important;
+  color: #eaeaea !important;
+}
+
+body.dark .form-control,
+body.dark .form-select {
+  background-color: #222 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+body.dark .btn {
+  border-color: #666;
+}
+
+body.dark .btn-primary {
+  background-color: #0d6efd;
+}
+
+body.dark .table thead {
+  background-color: #222 !important;
+}
